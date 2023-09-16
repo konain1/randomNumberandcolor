@@ -8,14 +8,18 @@ const random = document.querySelector('.random')
 
 const button = document.querySelector('button')
 
+let color = ['red','green','blue','yellow','pink','black','orange','aqua','lighpink','lightgreen']
 
 button.addEventListener('click',()=>{
 
-    card.style.backgroundColor = 'red'
     randomfn()
+    button.style.display = 'none'
+    
+
 
     setTimeout(()=>{
         card.style.backgroundColor = ''
+        button.style.display = 'block'
 
 
         removedp()
@@ -25,11 +29,15 @@ button.addEventListener('click',()=>{
 function randomfn(){
 
     let num = Math.floor(Math.random() * 10)
-
+    card.style.backgroundColor = color[num]
     const p = document.createElement('p')
+   
+
     p.className = 'randomNumber'
     p.innerHTML = num
     random.appendChild(p)
+    
+
 
 }
 function removedp(){

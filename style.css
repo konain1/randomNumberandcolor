@@ -47,3 +47,6 @@ button {
     border-color: #555;
     border-radius: 20px;
 }
+.random span {
+    color: white;
+}
